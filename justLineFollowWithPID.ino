@@ -3,7 +3,7 @@ Developed By:
 Mehedi Hasan Mukit    ,CSE-14, IUT
 Hossain Mohammad Seym ,CSE-14, IUT
 
-With any kind of distribution include the authors name.
+With any kind of distribution authors name must be included.
 */
 
 
@@ -11,33 +11,40 @@ With any kind of distribution include the authors name.
 
 
 
-
-
-
-
-sudo#define W 100
+/*
+  Defines the threshold to differ black and white.
+  As sensor value ranges from 0-1023, so the value 
+  must be in between 0 to 1023.
+*/
+#define whiteThershold 100
 #define integralLimit 100000
-
-
-#define kp  .4//.3
+#define kp .4
 #define kd 1
-#define ki .000
+#define ki .0001
 #define minus 0
 
-#define Z 150
 
-//base speeds
-#define L Z
-#define R Z
-//max speeds
+//  This randomConstant defines base speed for both wheels
+#define randomConstant 150
+
+//base speeds for left and right wheel
+#define leftBaseSpeed Z
+#define rightBaseSpeed Z
+
+//maximum allowed speeds 
+#define leftMaxSpeed Z+30
+#define rightMaxSpeed Z+30
+
+
+//--------------------------------------------------- Advanced
+// If you are beginner use factor  = 1
+
+/* this factor is used to balance the motor speed.
+  Let, to move the bot straight motor speed be like,
+  leftMotorSpeed = 180 , rightMotorSpeed = 100.
+  So, if we give a factor in motor functions 
+*/
 #define factor 1.1
-//150 -30
-
-//160 -20
-#define LMS Z+30
-#define RMS Z+30
-
-
 // defining motor pins
 #define inC 5
 #define inD 6
@@ -83,8 +90,8 @@ void pid()
   e = kp * error + kd * (error - lastError); //+ ki * integral;
 
   lastError = error;
-  LS = L - e;
-  RS = R + e;
+  LS = leftBaseSpeed - e;
+  RS = rightBaseSpeed + e;
 
   if (LS > LMS) LS = LMS;
   if (RS > RMS) RS = RMS;
@@ -113,32 +120,6 @@ int sensor()
   a[4] = analogRead(A4);
   a[5] = analogRead(A5);
 
-  f[0] = analogRead(A15);
-  f[1] = analogRead(A14);
-  f[2] = analogRead(A13);
-  f[3] = analogRead(A12);
-  f[4] = analogRead(A11);
-  f[5] = analogRead(A10);
-  f[6] = analogRead(A9);
-
-  fsum = 0;
-  //
-  for (int i = 0; i < 6; i++)
-  {
-    //        Serial.print(a[i]);
-    //        Serial.print('\t');
-
-    if ( a[i] < W )a[i] = 1;
-    else a[i] = 0;
-
-    Serial.print(a[i]);
-    Serial.print('\t');
-  }
-  //  Serial.print("fsum ");
-  //  Serial.print(fsum);
-  Serial.print('\t');
-  Serial.print('\t');
-
 
   int pos, neu = 0, den = 0;
   for (int i = 0; i < 7; i++)
@@ -165,14 +146,10 @@ int sensor()
   if (den == 0)pos =  setpoint - lastError;
   else if (den == 7)pos = setpoint;
   else pos = (100 * neu) / den;
-
-
-
   Serial.print("\t sensor");
   Serial.print(pos);
   Serial.println();
   return pos;
-
 }
 
 
