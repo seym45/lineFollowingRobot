@@ -2,8 +2,9 @@
 Developed By:
 Mehedi Hasan Mukit    ,CSE-14, IUT
 Hossain Mohammad Seym ,CSE-14, IUT
-*/
 
+With any kind of distribution include the authors name.
+*/
 
 
 
