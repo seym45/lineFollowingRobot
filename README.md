@@ -7,11 +7,11 @@
     *** NEVER EVER CONNECT with wrong polarity(ground with live or vice versa)
 
   1. Making the Body 
-    ..* Shape the body
-    ..* Mount The motors
-    ..* Connect Motor to motor Driver to Arduino
-    ..* Arrange and add sensors to Board
-    ..* Connect the Jumper wires from sensors to Arduino
+  ..* Shape the body
+  ..* Mount The motors
+  ..* Connect Motor to motor Driver to Arduino
+  ..* Arrange and add sensors to Board
+  ..* Connect the Jumper wires from sensors to Arduino
     
   2. Checking Connections
     - All the grounds should be connected
