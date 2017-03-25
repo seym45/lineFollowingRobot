@@ -9,19 +9,18 @@
     *** DON'T connect the battery, Just now. Wait a bit.
     *** NEVER EVER CONNECT with wrong polarity(ground with live or vice versa)
 
-  #### 1. Making the Body
-    * Shape the body
-    * Mount The motors
-    * Connect Motor to motor Driver to Arduino
-    * Arrange and add sensors to Board
-    * Connect the Jumper wires from sensors to Arduino
-    
-  2. #### Checking Connections
+#### 1. Making the Body
+    - Shape the body
+    - Mount The motors
+    - Connect Motor to motor Driver to Arduino
+    - Arrange and add sensors to Board
+    - Connect the Jumper wires from sensors to Arduino
+#### 2. Checking Connections
     - All the grounds should be connected
     - Check individually that everything works
       - connect the motor with battery whether it is running or not.
       - power up tcrt sensors and take a camera in front of TCRT if it is showing violet lights.
-  #### 3. Coding 
+#### 3. Coding 
     - Upload a Simple code to check Arduino
     - check simple TCRT Codes
     - Run motors in different directions.
