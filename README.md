@@ -1,6 +1,8 @@
 # Every thing about Arduino based Line-Follower-Robot (LFR)
 
-> Steps To Make a Line Follower Robot (LFR)
+>## Steps To Make a Line Follower Robot (LFR)
+  
+  
   Precautions !!!
 
     *** DON'T connect the battery, Just now. Wait a bit.
@@ -32,12 +34,12 @@
 
 
 
-> Source Codes for
+#> Source Codes for
   - Checking TCRT 5000 reflective sensors digital and raw mode
   - linear maze without loop.
   - Simple PID based Line Follower
 
-> Done
+#> Done
   - TCRT check
 
 
