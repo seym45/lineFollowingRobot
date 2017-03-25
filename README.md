@@ -5,9 +5,9 @@
   
   
   
-    *** Precautions !!!
-    *** DON'T connect the battery, Just now. Wait a bit.
-    *** NEVER EVER CONNECT with wrong polarity(ground with live or vice versa)
+    ####Precautions !!!
+    DON'T connect the battery, Just now. Wait a bit.
+    NEVER EVER CONNECT with wrong polarity(ground with live or vice versa)
 
 #### 1. Making the Body
     - Shape the body
