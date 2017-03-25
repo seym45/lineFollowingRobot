@@ -18,15 +18,19 @@
 #### 2. Checking Connections
     - All the grounds should be connected
     - Check individually that everything works
-      - connect the motor with battery whether it is running or not.
-      - power up tcrt sensors and take a camera in front of TCRT if it is showing violet lights.
+    - connect the motor with battery whether it is running or not.
+    - power up tcrt sensors and take a camera in front of TCRT if it is showing violet lights.
 #### 3. Coding 
     - Upload a Simple code to check Arduino
     - check simple TCRT Codes
     - Run motors in different directions.
     - Now upload the justLineFollowWithPID.ino and tune up the PID constants.  
  
+``
 
+
+
+``
 
 
 
